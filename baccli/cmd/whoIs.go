@@ -18,7 +18,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/alexbeltran/gobacnet"
+	"gobacnet"
+
 	"github.com/spf13/cobra"
 )
 

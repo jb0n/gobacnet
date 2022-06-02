@@ -34,7 +34,7 @@ package encoding
 import (
 	"fmt"
 
-	bactype "github.com/alexbeltran/gobacnet/types"
+	bactype "gobacnet/types"
 )
 
 const (

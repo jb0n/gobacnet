@@ -18,14 +18,13 @@ import (
 	"fmt"
 	"strconv"
 
+	log "github.com/sirupsen/logrus"
+	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/alexbeltran/gobacnet"
-	"github.com/alexbeltran/gobacnet/property"
-	"github.com/alexbeltran/gobacnet/types"
-	"github.com/spf13/cobra"
-
-	log "github.com/sirupsen/logrus"
+	"gobacnet"
+	"gobacnet/property"
+	"gobacnet/types"
 )
 
 // Flags

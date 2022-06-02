@@ -37,7 +37,7 @@ import (
 	"strings"
 	"testing"
 
-	bactype "github.com/alexbeltran/gobacnet/types"
+	bactype "gobacnet/types"
 )
 
 func TestReadPropertyService(t *testing.T) {

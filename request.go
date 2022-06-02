@@ -37,8 +37,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/alexbeltran/gobacnet/encoding"
-	bactype "github.com/alexbeltran/gobacnet/types"
+	"gobacnet/encoding"
+	bactype "gobacnet/types"
 )
 
 // ReadProperty reads a single property from a single object in the given device.
@@ -90,7 +90,7 @@ func (c *Client) ReadProperty(dest bactype.Device, rp bactype.ReadPropertyData) 
 		}
 		switch v := raw.(type) {
 		case error:
-			return out, err
+			return out, v
 		case []byte:
 			b = v
 		default:
