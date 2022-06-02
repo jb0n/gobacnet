@@ -32,7 +32,7 @@ License.
 package encoding
 
 import (
-	bactype "gobacnet/types"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
 // Bacnet Virtual Layer Control

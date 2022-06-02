@@ -34,7 +34,7 @@ import (
 	"reflect"
 	"testing"
 
-	"gobacnet/types"
+	"github.com/jb0n/gobacnet/types"
 )
 
 func subTestSimpleData(t *testing.T, d *Decoder, x interface{}) func(t *testing.T) {

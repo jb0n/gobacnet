@@ -35,7 +35,7 @@ import (
 	"reflect"
 	"testing"
 
-	bactype "gobacnet/types"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
 const compareErrFmt = "Mismatch in %s when decoding values. Expected: %d, received: %d"

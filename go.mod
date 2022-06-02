@@ -3,7 +3,7 @@ module gobacnet
 go 1.18
 
 require (
-	github.com/alexbeltran/gobacnet v0.0.0-20180105203751-41ceb6925099
+	github.com/jb0n/gobacnet v0.0.0-20180105203751-41ceb6925099
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.4.0
@@ -11,6 +11,7 @@ require (
 )
 
 require (
+	github.com/alexbeltran/gobacnet v0.0.0-20180105203751-41ceb6925099 // indirect
 	github.com/fsnotify/fsnotify v1.5.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.0 // indirect

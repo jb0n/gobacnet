@@ -35,7 +35,7 @@ import (
 	"bytes"
 	"encoding/binary"
 
-	bactype "gobacnet/types"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
 var EncodingEndian binary.ByteOrder = binary.BigEndian

@@ -23,8 +23,8 @@ import (
 	"github.com/spf13/viper"
 
 	"gobacnet"
-	"gobacnet/property"
-	"gobacnet/types"
+	"github.com/jb0n/gobacnet/property"
+	"github.com/jb0n/gobacnet/types"
 )
 
 // Flags

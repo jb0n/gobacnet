@@ -36,7 +36,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	bactype "gobacnet/types"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
 // Decoder used

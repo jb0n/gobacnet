@@ -21,7 +21,7 @@ import (
 	"time"
 
 	"gobacnet"
-	"gobacnet/types"
+	"github.com/jb0n/gobacnet/types"
 
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
