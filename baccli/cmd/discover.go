@@ -20,7 +20,7 @@ import (
 	"sync"
 	"time"
 
-	"gobacnet"
+	"github.com/jb0n/gobacnet"
 	"github.com/jb0n/gobacnet/types"
 
 	"github.com/sirupsen/logrus"

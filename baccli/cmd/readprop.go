@@ -22,7 +22,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"gobacnet"
+	"github.com/jb0n/gobacnet"
 	"github.com/jb0n/gobacnet/property"
 	"github.com/jb0n/gobacnet/types"
 )
