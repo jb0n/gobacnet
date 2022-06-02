@@ -3,9 +3,11 @@ package property
 import "fmt"
 
 const (
+	SoftwareRevision uint32 = 12
 	Description      uint32 = 28
 	FileSize         uint32 = 42
 	FileType         uint32 = 43
+	FirmwareRevision uint32 = 44
 	ModelName        uint32 = 70
 	ObjectIdentifier uint32 = 75
 	ObjectList       uint32 = 76
@@ -26,6 +28,7 @@ var enumMapping = map[string]uint32{
 	DescriptionStr:     Description,
 	"FileSize":         FileSize,
 	"FileType":         FileType,
+	"FirmwareRevision": FirmwareRevision,
 	"ModelName":        ModelName,
 	"ObjectIdentifier": ObjectIdentifier,
 	"ObjectList":       ObjectList,
@@ -36,19 +39,7 @@ var enumMapping = map[string]uint32{
 	"Units":            Units,
 }
 
-var strMapping = map[uint32]string{
-	Description:      "Description",
-	FileSize:         "File Size",
-	FileType:         "File Type",
-	ModelName:        "Model Name",
-	ObjectIdentifier: "Object Identifier",
-	ObjectList:       "Object List",
-	ObjectName:       "Object Name",
-	ObjectReference:  "Object Reference",
-	ObjectType:       "Object Type",
-	PresentValue:     "Present Value",
-	Units:            "Units",
-}
+var strMapping = map[uint32]string{}
 
 // listOfKeys should be treated as read only after init
 var listOfKeys []string
@@ -59,6 +50,10 @@ func init() {
 	for k := range enumMapping {
 		listOfKeys[i] = k
 		i++
+	}
+
+	for k, v := range enumMapping {
+		strMapping[v] = k
 	}
 }
 
