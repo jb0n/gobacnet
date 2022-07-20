@@ -16,6 +16,8 @@ const (
 	ObjectType       uint32 = 79
 	PresentValue     uint32 = 85
 	Units            uint32 = 117
+	VendorID         uint32 = 120
+	VendorName       uint32 = 121
 )
 
 const (
@@ -37,6 +39,8 @@ var enumMapping = map[string]uint32{
 	"ObjectType":       ObjectType,
 	"PresentValue":     PresentValue,
 	"Units":            Units,
+	"VendorID":         VendorID,
+	"VendorName":       VendorName,
 }
 
 var strMapping = map[uint32]string{}
