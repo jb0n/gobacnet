@@ -35,6 +35,7 @@ import (
 	"fmt"
 
 	bactype "github.com/jb0n/gobacnet/types"
+	"github.com/warthog618/sms/encoding/ucs2"
 )
 
 const (
@@ -103,13 +104,24 @@ func (e *Encoder) string(s string) {
 func (d *Decoder) string(s *string, len int) error {
 	var t stringType
 	d.decode(&t)
-	if t != stringUTF8 {
+	switch t {
+	default:
 		return fmt.Errorf("unsupported string format %d", t)
+	case stringUTF8:
+		b := make([]byte, len)
+		d.decode(b)
+		*s = string(b)
+	case stringUCS2:
+		b := make([]byte, len)
+		d.decode(b)
+		r, err := ucs2.Decode(b)
+		if err != nil {
+			return fmt.Errorf("error decoding ucs2 string. err=%w", err)
+		}
+		for i := range r {
+			*s += string(r[i])
+		}
 	}
-
-	b := make([]byte, len)
-	d.decode(b)
-	*s = string(b)
 	return d.Error()
 }
 func (e *Encoder) octetstring(b []byte) {
