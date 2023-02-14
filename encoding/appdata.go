@@ -107,7 +107,7 @@ func (d *Decoder) string(s *string, len int) error {
 	switch t {
 	default:
 		return fmt.Errorf("unsupported string format %d", t)
-	case stringUTF8:
+	case stringUTF8, string88591:
 		b := make([]byte, len)
 		d.decode(b)
 		*s = string(b)
