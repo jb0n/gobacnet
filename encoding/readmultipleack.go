@@ -177,7 +177,6 @@ func (d *Decoder) objectsWithData(objects *[]bactype.Object) error {
 			obj.Properties = append(obj.Properties, prop)
 
 			// we can get multiple objects (tag 12) here!
-			expectedTag = 4
 		OUTER:
 			for {
 				tag, meta = d.tagNumber()
@@ -196,10 +195,6 @@ func (d *Decoder) objectsWithData(objects *[]bactype.Object) error {
 					objType, instance := d.objectId()
 					obj.ID.Type = objType
 					obj.ID.Instance = instance
-				}
-
-				if tag == 4 {
-					break
 				}
 			}
 
