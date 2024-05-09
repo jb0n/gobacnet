@@ -32,7 +32,7 @@ License.
 package encoding
 
 import (
-	"github.com/jb0n/gobacnet/types"
+	"gobacnet/types"
 )
 
 func (enc *Encoder) IAm(id types.IAm) error {

@@ -39,9 +39,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/jb0n/gobacnet/tsm"
-	bactype "github.com/jb0n/gobacnet/types"
-	"github.com/jb0n/gobacnet/utsm"
+	"gobacnet/tsm"
+	bactype "gobacnet/types"
+	"gobacnet/utsm"
 )
 
 const defaultStateSize = 20

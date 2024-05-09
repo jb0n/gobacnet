@@ -36,8 +36,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/jb0n/gobacnet/encoding"
-	bactype "github.com/jb0n/gobacnet/types"
+	"gobacnet/encoding"
+	bactype "gobacnet/types"
 )
 
 const maxReattempt = 2

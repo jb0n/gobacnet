@@ -14,7 +14,7 @@
 
 package main
 
-import "github.com/jb0n/gobacnet/baccli/cmd"
+import "gobacnet/baccli/cmd"
 
 func main() {
 	cmd.Execute()

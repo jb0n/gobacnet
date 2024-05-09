@@ -1,4 +1,4 @@
-module github.com/jb0n/gobacnet
+module gobacnet
 
 go 1.18
 

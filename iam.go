@@ -1,8 +1,8 @@
 package gobacnet
 
 import (
-	"github.com/jb0n/gobacnet/encoding"
-	bactype "github.com/jb0n/gobacnet/types"
+	"gobacnet/encoding"
+	bactype "gobacnet/types"
 )
 
 func (c *Client) iAm(dest bactype.Address) error {

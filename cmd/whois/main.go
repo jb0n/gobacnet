@@ -5,7 +5,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jb0n/gobacnet"
+	"gobacnet"
 )
 
 func main() {

@@ -37,8 +37,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/jb0n/gobacnet/encoding"
-	bactype "github.com/jb0n/gobacnet/types"
+	"gobacnet/encoding"
+	bactype "gobacnet/types"
 )
 
 // ReadProperty reads a single property from a single object in the given device.
