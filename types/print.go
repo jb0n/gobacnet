@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"strings"
 
-	"gobacnet/property"
+	"github.com/jb0n/gobacnet/property"
 )
 
 const defaultSpacing = 4

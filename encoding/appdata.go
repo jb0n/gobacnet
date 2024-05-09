@@ -34,8 +34,7 @@ package encoding
 import (
 	"fmt"
 
-	bactype "gobacnet/types"
-
+	bactype "github.com/jb0n/gobacnet/types"
 	"github.com/warthog618/sms/encoding/ucs2"
 )
 

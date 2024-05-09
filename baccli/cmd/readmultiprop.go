@@ -21,13 +21,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"gobacnet"
-	"gobacnet/property"
-	"gobacnet/types"
+	"github.com/jb0n/gobacnet"
+	"github.com/jb0n/gobacnet/property"
+	"github.com/jb0n/gobacnet/types"
 )
 
-// readmultipropCmd represents the readmultiprop command
-var readmultipropCmd = &cobra.Command{
+var readmultipropCmd = // readmultipropCmd represents the readmultiprop command
+&cobra.Command{
 	Use:   "multi",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples

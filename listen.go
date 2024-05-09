@@ -36,12 +36,12 @@ import (
 	"net"
 	"os"
 
-	"gobacnet/encoding"
-	bactype "gobacnet/types"
+	"github.com/jb0n/gobacnet/encoding"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
-// Close free resources for the client. Always call this function when using NewClient
-func (c *Client) Close() {
+func (c *Client) Close( // Close free resources for the client. Always call this function when using NewClient
+) {
 	if c.listener == nil {
 		return
 	}

@@ -37,12 +37,12 @@ import (
 	"log"
 	"time"
 
-	"gobacnet/encoding"
-	bactype "gobacnet/types"
+	"github.com/jb0n/gobacnet/encoding"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
-// ReadProperty reads a single property from a single object in the given device.
-func (c *Client) ReadProperty(dest bactype.Device, rp bactype.ReadPropertyData) (bactype.ReadPropertyData, error) {
+func (c *Client) ReadProperty( // ReadProperty reads a single property from a single object in the given device.
+dest bactype.Device, rp bactype.ReadPropertyData) (bactype.ReadPropertyData, error) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 	id, err := c.tsm.ID(ctx)

@@ -35,12 +35,12 @@ import (
 	"fmt"
 	"net"
 
-	"gobacnet/encoding"
-	bactype "gobacnet/types"
+	"github.com/jb0n/gobacnet/encoding"
+	bactype "github.com/jb0n/gobacnet/types"
 )
 
-// address returns the address given
-func (c *Client) address(addr bactype.Address) (net.UDPAddr, error) {
+func (c *Client) address( // address returns the address given
+addr bactype.Address) (net.UDPAddr, error) {
 	if addr.IsBroadcast() {
 		return net.UDPAddr{
 			IP:   c.broadcastAddress,

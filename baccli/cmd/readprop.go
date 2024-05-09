@@ -22,14 +22,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"gobacnet"
-	"gobacnet/property"
-	"gobacnet/types"
+	"github.com/jb0n/gobacnet"
+	"github.com/jb0n/gobacnet/property"
+	"github.com/jb0n/gobacnet/types"
 )
 
-// Flags
 var (
-	deviceID       int
+	deviceID       int // Flags
 	objectID       int
 	objectType     int
 	arrayIndex     uint32
