@@ -248,6 +248,10 @@ func (e *Encoder) AppData(i interface{}) error {
 
 func (d *Decoder) AppData() (interface{}, error) {
 	tag, _, lenvalue := d.tagNumberAndValue()
+	return d.appData(tag, lenvalue)
+}
+
+func (d *Decoder) appData(tag uint8, lenvalue uint32) (interface{}, error) {
 	len := int(lenvalue)
 
 	switch tag {

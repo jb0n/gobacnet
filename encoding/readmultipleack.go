@@ -176,11 +176,33 @@ func (d *Decoder) objectsWithData(objects *[]bactype.Object) error {
 			prop.Data = data
 			obj.Properties = append(obj.Properties, prop)
 
-			tag, meta = d.tagNumber()
+			// we can get multiple objects (tag 12) here!
 			expectedTag = 4
-			if tag != expectedTag {
-				return &ErrorIncorrectTag{Expected: expectedTag, Given: tag}
+		OUTER:
+			for {
+				tag, meta = d.tagNumber()
+				switch tag {
+				default:
+					return &ErrorIncorrectTag{Expected: expectedTag, Given: tag}
+
+				case 4:
+					break OUTER
+
+				case tagObjectID:
+					*objects = append(*objects, obj)
+					obj = bactype.Object{
+						Properties: []bactype.Property{},
+					}
+					objType, instance := d.objectId()
+					obj.ID.Type = objType
+					obj.ID.Instance = instance
+				}
+
+				if tag == 4 {
+					break
+				}
 			}
+
 			if !meta.isClosing() {
 				return &ErrorWrongTagType{ClosingTag}
 			}
